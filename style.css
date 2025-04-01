@@ -1,0 +1,206 @@
+/* Genel Stiller */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Sonuç Kutusu Stilleri */
+.result-box {
+    min-height: 100px;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    direction: ltr;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+#ipaOutput {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Buton Stilleri */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+    transition: all 0.2s;
+}
+
+.btn-outline-primary {
+    color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* Ses Butonları */
+.btn-outline-primary:disabled {
+    color: #6c757d;
+    border-color: #6c757d;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-outline-primary:not(:disabled):active {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.btn-playing {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+    
+    .d-flex {
+        flex-direction: column;
+    }
+    
+    .btn {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+}
+
+/* Animasyonlar */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Özel Fontlar */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* IPA Metin Formatı */
+.ipa-text {
+    font-family: 'Doulos SIL', 'Lucida Sans Unicode', 'Arial Unicode MS', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* RTL diller için stil desteği */
+.rtl-text {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Dil seçim alanları */
+.form-select {
+    cursor: pointer;
+}
+
+/* Kopyala ve Ses düğmeleri */
+.btn-outline-secondary:hover, 
+.btn-outline-primary:hover {
+    transform: translateY(-1px);
+    transition: transform 0.2s;
+}
+
+/* API Ayarları */
+.input-group-text {
+    min-width: 120px;
+}
+
+/* Bildirimler */
+.alert {
+    animation: slideIn 0.3s ease-out forwards;
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.alert.alert-info {
+    background-color: #cce5ff;
+    border-color: #b8daff;
+    color: #004085;
+}
+
+.alert.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}
+
+.alert.alert-error,
+.alert.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.alert.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 767.98px) {
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .result-box {
+        min-height: 80px;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+    
+    .input-group-text {
+        min-width: 100px;
+    }
+} 
